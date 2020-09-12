@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '@/store'
 
 Vue.use(VueRouter)
 
@@ -27,4 +28,7 @@ const router = new VueRouter({
   routes
 })
 
+router.afterEach(() => {
+  store.dispatch('storeMenu/SET_MENU_ACTIVE_ACTION', false)
+})
 export default router
