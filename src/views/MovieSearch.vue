@@ -1,14 +1,6 @@
 <template>
   <section>
-    <header>
-      <input
-        type="text"
-        id="search"
-        placeholder="Search"
-        class="search"
-        v-model="query"
-      />
-    </header>
+    <SearchBox v-model="query"></SearchBox>
     <main class="movie-wrapper" :class="{'loading': loadingMovies}">
       <div class="movie" v-for="(movie, key) in movies" :key="key">
         <img :src="posterPath(movie.poster_path)" :alt="movie.title"/>
@@ -34,9 +26,11 @@
   import { mapState, mapGetters, mapActions } from 'vuex'
   import { apiCall } from "@/services/movies.service"
   import debounce from 'lodash/debounce'
+  import SearchBox from "@/components/movies/SearchBox";
 
   export default {
     name: "MovieSearch",
+    components: {SearchBox},
     data() {
       return {
         movieList: [],
@@ -130,32 +124,6 @@
   }
   .movie-wrapper.loading {
     min-height: 100vh;
-  }
-
-  header {
-    background-color: #628c5a;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-  }
-
-  .search {
-    background-color: transparent;
-    border: 2px solid #373b69;
-    border-radius: 50px;
-    color: #fff;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .search::placeholder {
-    color: #373b69;
-  }
-
-  .search:focus {
-    background-color: #628c5a;
-    outline: none;
   }
 
   main {
