@@ -9,7 +9,7 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import { apiCall } from "@/services/movies.service"
+  import { apiCall } from "@/services/api.service"
   import debounce from 'lodash/debounce'
   import SearchBox from "@/components/movies/SearchBox";
   import MovieCard from "@/components/movies/MovieCard";

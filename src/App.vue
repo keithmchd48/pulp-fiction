@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link :to="{name: 'count-down-timer'}">CountDown</router-link>
       <router-link :to="{name: 'movie-search'}">MovieSearch</router-link>
+      <router-link :to="{name: 'github-profile-viewer'}">GithubProfile</router-link>
     </div>
     <router-view/>
   </div>
@@ -24,12 +25,14 @@ body {
   padding: 30px;
   background-color: #2c3e50;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #nav a {
   font-weight: bold;
   color: #eeeeee;
-  margin-left: 10px;
+  margin-left: 13px;
   text-decoration: none;
 }
 

@@ -14,6 +14,11 @@ Vue.use(VueRouter)
       name: 'movie-search',
       component: () => import(/* webpackChunkName: "moviesearch" */ '../views/MovieSearch.vue')
     },
+    {
+      path: '/github-profile-viewer',
+      name: 'github-profile-viewer',
+      component: () => import(/* webpackChunkName: "githubprofileviewer" */ '../views/GithubProfileViewer')
+    },
 ]
 
 const router = new VueRouter({
