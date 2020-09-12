@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link :to="{name: 'count-down-timer'}">CountDown</router-link>
-      <router-link :to="{name: 'about'}">About</router-link>
+      <router-link :to="{name: 'movie-search'}">MovieSearch</router-link>
     </div>
     <router-view/>
   </div>

@@ -1,23 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ViewCountDownTimer from '../views/ViewCountDownTimer.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
-  {
-    path: '/',
-    name: 'count-down-timer',
-    component: ViewCountDownTimer
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    {
+      path: '/',
+      name: 'count-down-timer',
+      component: () => import(/* webpackChunkName: "countdowntimer" */ '../views/ViewCountDownTimer.vue')
+    },
+    {
+      path: '/movie-search',
+      name: 'movie-search',
+      component: () => import(/* webpackChunkName: "moviesearch" */ '../views/MovieSearch.vue')
+    },
 ]
 
 const router = new VueRouter({
