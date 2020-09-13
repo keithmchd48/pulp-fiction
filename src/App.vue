@@ -6,6 +6,7 @@
       <router-link :to="{name: 'count-down-timer'}">CountDown</router-link>
       <router-link :to="{name: 'movie-search'}">MovieSearch</router-link>
       <router-link :to="{name: 'github-profile-viewer'}">GithubProfile</router-link>
+      <router-link :to="{name: 'drawing-tool'}">Sketch</router-link>
     </div>
     <router-view/>
   </div>
@@ -70,6 +71,11 @@ body {
   }
   .fa-bars {
     display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #nav > *:nth-child(4) {
+    display: none;
   }
 }
 </style>

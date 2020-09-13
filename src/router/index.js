@@ -20,6 +20,11 @@ Vue.use(VueRouter)
       name: 'github-profile-viewer',
       component: () => import(/* webpackChunkName: "githubprofileviewer" */ '../views/GithubProfileViewer')
     },
+    {
+      path: '/drawing-tool',
+      name: 'drawing-tool',
+      component: () => import(/* webpackChunkName: "drwaingtool" */ '../views/DrawingTool')
+    }
 ]
 
 const router = new VueRouter({

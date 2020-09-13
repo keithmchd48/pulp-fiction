@@ -5,6 +5,7 @@
       <router-link :to="{name: 'count-down-timer'}">CountDown</router-link>
       <router-link :to="{name: 'movie-search'}">MovieSearch</router-link>
       <router-link :to="{name: 'github-profile-viewer'}">GithubProfile</router-link>
+<!--      <router-link :to="{name: 'drawing-tool'}">Sketch</router-link>-->
     </div>
   </div>
 </template>
