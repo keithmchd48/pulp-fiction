@@ -1,7 +1,7 @@
 <template>
   <div class="main_wrapper">
     <div class="center_div">
-      <h2>Until my next birthday:</h2>
+      <h2>{{text}}<span class="blinking-cursor">|</span></h2>
       <div class="countdown_container">
         <div class="days">
           <div class="number">{{days}}</div>
@@ -30,7 +30,11 @@ export default {
   name: 'ViewCountDownTimer',
   data () {
     return {
-      totalSeconds: 0
+      totalSeconds: 0,
+      text: '',
+      fixedText: 'Until my next birthday:',
+      index: 0,
+      textInterval: null
     }
   },
   created() {
@@ -42,6 +46,9 @@ export default {
     bday
     this.totalSeconds = (bday - moment()) / 1000
     setInterval(() => this.countdown(), 1000)
+  },
+  mounted() {
+    this.textInterval = setInterval(this.writeText, 100)
   },
   computed: {
     days () {
@@ -62,6 +69,13 @@ export default {
     }
   },
   methods: {
+    writeText () {
+      this.text = this.fixedText.slice(0, this.index)
+      this.index++
+      if (this.index > this.fixedText.length) {
+        clearInterval(this.textInterval)
+      }
+    },
     countdown () {
       this.totalSeconds -= 1
     },
@@ -98,4 +112,61 @@ export default {
     display: flex;
     align-items: center;
   }
+/*  Blinking cursor*/
+  .blinking-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: #2c3e50;
+    -webkit-animation: 0.5s blink step-end infinite;
+    -moz-animation: 0.5s blink step-end infinite;
+    -ms-animation: 0.5s blink step-end infinite;
+    -o-animation: 0.5s blink step-end infinite;
+    animation: 0.5s blink step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-ms-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-o-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #2c3e50;
+    }
+  }
+
 </style>
