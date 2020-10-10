@@ -58,7 +58,8 @@
       height: 100%;
       width: 50% !important;
       z-index: 8 !important;
-      position: absolute !important;
+      position: fixed !important;
+      position: -ms-device-fixed !important;
       transition: 1s !important;
       overflow-y: scroll !important;
       left: -100%;
