@@ -29,4 +29,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Hosted on
-https://pupl-fiction.netlify.app/
+https://pulp-fiction.netlify.app/
