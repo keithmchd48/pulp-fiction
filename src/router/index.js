@@ -24,6 +24,11 @@ Vue.use(VueRouter)
       path: '/drawing-tool',
       name: 'drawing-tool',
       component: () => import(/* webpackChunkName: "drwaingtool" */ '../views/DrawingTool')
+    },
+    {
+      path: '/expanding-cards',
+      name: 'expanding-cards',
+      component: () => import(/* webpackChunkName: "drwaingtool" */ '../views/ExpandingImageCards')
     }
 ]
 

@@ -7,6 +7,7 @@
       <router-link :to="{name: 'movie-search'}">MovieSearch</router-link>
       <router-link :to="{name: 'github-profile-viewer'}">GithubProfile</router-link>
       <router-link :to="{name: 'drawing-tool'}">Sketch</router-link>
+      <router-link :to="{name: 'expanding-cards'}">ExpandCards</router-link>
     </div>
     <router-view/>
   </div>
