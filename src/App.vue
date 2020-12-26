@@ -8,6 +8,7 @@
       <router-link :to="{name: 'github-profile-viewer'}">GithubProfile</router-link>
       <router-link :to="{name: 'drawing-tool'}">Sketch</router-link>
       <router-link :to="{name: 'expanding-cards'}">ExpandCards</router-link>
+      <router-link :to="{name: 'clock'}">Clock</router-link>
     </div>
     <router-view/>
   </div>

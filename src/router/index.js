@@ -28,7 +28,12 @@ Vue.use(VueRouter)
     {
       path: '/expanding-cards',
       name: 'expanding-cards',
-      component: () => import(/* webpackChunkName: "drwaingtool" */ '../views/ExpandingImageCards')
+      component: () => import(/* webpackChunkName: "expandingcards" */ '../views/ExpandingImageCards')
+    },
+    {
+      path: '/clock',
+      name: 'clock',
+      component: () => import(/* webpackChunkName: "clock" */ '../views/Clock')
     }
 ]
 
