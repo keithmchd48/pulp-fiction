@@ -15,18 +15,15 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ### Hosted on
-https://pulp-fiction.netlify.app/
+[Pulp Fiction](https://pulp-fiction.netlify.app/)
+
+### Resources
+###### Clock:
+1. [Moment.js](https://momentjs.com/)
+2. [Brad Traversy - GitHub](https://50projects50days.com/projects/theme-clock/)
+
+###### Glassmorphism:
+1. [Cleave.js](https://nosir.github.io/cleave.js/)
+2. [Cleave.js - Vue support](https://github.com/nosir/cleave.js/blob/master/doc/vue.md)
+3. [codeSTACKr - YouTube](https://www.youtube.com/watch?v=jEa9YyRqE1U)

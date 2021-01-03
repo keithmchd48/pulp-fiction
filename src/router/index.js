@@ -34,6 +34,11 @@ Vue.use(VueRouter)
       path: '/clock',
       name: 'clock',
       component: () => import(/* webpackChunkName: "clock" */ '../views/Clock')
+    },
+    {
+      path: '/glassmorphism',
+      name: 'glassmorphism',
+      component: () => import(/* webpackChunkName: "glassmorphism" */ '../views/GlassMorphism')
     }
 ]
 
